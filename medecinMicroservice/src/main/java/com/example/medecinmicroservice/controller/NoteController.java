@@ -1,0 +1,28 @@
+package com.example.medecinmicroservice.controller;
+
+import com.example.medecinmicroservice.module.Note;
+import com.example.medecinmicroservice.module.parameter.NoteParameter;
+import com.example.medecinmicroservice.module.reponse.NoteDTO;
+import com.example.medecinmicroservice.service.NoteService;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
+
+@Controller
+@RequestMapping("/note")
+public class NoteController {
+
+    private final NoteService noteService;
+
+    public NoteController(NoteService noteService) {
+        this.noteService = noteService;
+    }
+
+    @GetMapping("/patient/{patientId}")
+    public List<NoteDTO> getNotesByPatientId(@PathVariable("patientId") int patientId) {
+        return noteService.getNotesByPatientId(patientId);
+    }
+}
