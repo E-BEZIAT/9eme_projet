@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/feign/MedecinFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/feign/MedecinFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecinMicroservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/controller/NoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/parameter/NoteParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/parameter/NoteParameter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +20,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "E-BEZIAT"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/E-BEZIAT/9eme_projet.git",
+    "accountId": "91016dde-f308-4661-8ddd-6e9a95df374f"
+  }
+}]]></component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -31,25 +51,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/BEZIAT/Documents/Formation_dev/9eme_projet/patientMicroservice&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication.executor": "Run",
+    "Spring Boot.FrontMicroserviceApplication.executor": "Run",
+    "Spring Boot.GatewayMicroserviceApplication.executor": "Run",
+    "Spring Boot.MedecinMicroserviceApplication.executor": "Run",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/BEZIAT/Documents/Formation_dev/9eme_projet/patientMicroservice",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Spring Boot.GatewayMicroserviceApplication">
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Compound.Unnamed">
+    <configuration name="Unnamed" type="CompoundRunConfigurationType">
+      <toRun name="DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="FrontMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="GatewayMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MedecinMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
     <configuration name="DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="patientMicroservice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example._eme_Projet.DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" />
@@ -80,6 +126,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Compound.Unnamed" />
+      <item itemvalue="Spring Boot.DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" />
+      <item itemvalue="Spring Boot.FrontMicroserviceApplication" />
+      <item itemvalue="Spring Boot.GatewayMicroserviceApplication" />
+      <item itemvalue="Spring Boot.MedecinMicroserviceApplication" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -99,10 +152,35 @@
       <updated>1755978149182</updated>
       <workItem from="1755978149989" duration="73000" />
       <workItem from="1755978250986" duration="657000" />
+      <workItem from="1755979024566" duration="4856000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <option name="closed" value="true" />
+      <created>1755979106502</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1755979106502</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
