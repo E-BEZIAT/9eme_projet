@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Corrections pour l'affichage des notes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/feign/MedecinFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/feign/MedecinFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/notes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/controller/NoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/controller/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/reponse/NoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/reponse/NoteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/service/NoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/patientMicroservice/src/Main.java" beforeDir="false" />
+    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Création du microservice Diabete et ajout de la fonction créer une nouvelle note (spring 2/3)">
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,13 +59,14 @@
     "Spring Boot.MedecinMicroserviceApplication.executor": "Run",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/BEZIAT/Documents/Formation_dev/9eme_projet/patientMicroservice",
+    "last_opened_file_path": "C:/Users/BEZIAT/Documents/Formation_dev/9eme_projet/diabeteMicroservice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "onboarding.tips.debug.path": "C:/Users/BEZIAT/Documents/Formation_dev/9eme_projet/diabeteMicroservice/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
@@ -92,7 +84,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Unnamed">
+  <component name="RunManager">
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <toRun name="DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="FrontMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
@@ -156,7 +148,7 @@
       <updated>1755978149182</updated>
       <workItem from="1755978149989" duration="73000" />
       <workItem from="1755978250986" duration="657000" />
-      <workItem from="1755979024566" duration="12496000" />
+      <workItem from="1755979024566" duration="13571000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -174,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755987815305</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Création du microservice Diabete et ajout de la fonction créer une nouvelle note (spring 2/3)">
+      <option name="closed" value="true" />
+      <created>1756130023261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756130023261</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +194,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="Corrections pour l'affichage des notes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrections pour l'affichage des notes" />
+    <MESSAGE value="Création du microservice Diabete et ajout de la fonction créer une nouvelle note (spring 2/3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Création du microservice Diabete et ajout de la fonction créer une nouvelle note (spring 2/3)" />
   </component>
 </project>
