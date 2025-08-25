@@ -17,11 +17,12 @@ public class NoteService {
         this.noteRepository = noteRepository;
     }
 
-    public void createNote(NoteParameter noteParameter) {
+    public void createNote(NoteDTO noteDTO) {
         Note note = new Note(
-                noteParameter.getPatientId(),
-                noteParameter.getDateOfVisite(),
-                noteParameter.getNote()
+                noteDTO.getId(),
+                noteDTO.getPatientId(),
+                noteDTO.getDateOfVisit(),
+                noteDTO.getNote()
         );
 
         noteRepository.save(note);

@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Corrections pour l'affichage des notes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/feign/MedecinFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/feign/MedecinFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/notes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/controller/NoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/parameter/NoteParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/parameter/NoteParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/controller/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/reponse/NoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/reponse/NoteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/service/NoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/patientMicroservice/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +156,7 @@
       <updated>1755978149182</updated>
       <workItem from="1755978149989" duration="73000" />
       <workItem from="1755978250986" duration="657000" />
-      <workItem from="1755979024566" duration="4856000" />
+      <workItem from="1755979024566" duration="12496000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -162,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755979106502</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Corrections pour l'affichage des notes">
+      <option name="closed" value="true" />
+      <created>1755987815305</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755987815305</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +193,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Corrections pour l'affichage des notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrections pour l'affichage des notes" />
   </component>
 </project>

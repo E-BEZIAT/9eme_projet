@@ -8,7 +8,10 @@
 
 <h2 th:text="'Notes pour ' + ${patientWithNotesDTO.patientDTO.firstName} + ' ' + ${patientWithNotesDTO.patientDTO.lastName}"></h2>
 
-<form th:action="@{/patient/{id}/notes/create(id=${patientWithNotesDTO.patientDTO.id})}" method="post" class="mb-4">
+<form th:action="@{/patient/notes/create/{id}(id=${patientWithNotesDTO.patientDTO.id})}" method="post" class="mb-4">
+
+    <input type="hidden" name="patientId" th:value="${patientWithNotesDTO.patientDTO.id}"/>
+
     <div class="mb-3">
         <label for="note" class="form-label">Nouvelle note</label>
         <textarea class="form-control" id="note" name="note" rows="3" required></textarea>
@@ -27,7 +30,7 @@
     <tbody>
     <tr th:each="note : ${patientWithNotesDTO.notes}">
         <td th:text="${note.note}"></td>
-        <td th:text="${note.dateOfVisit}"></td>
+        <td th:text="${#temporals.format(note.dateOfVisit, 'dd/MM/yyyy HH:mm')}"></td>
     </tr>
     </tbody>
 </table>

@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/gatewayMicroservice/pom.xml" />
         <option value="$PROJECT_DIR$/medecinMicroservice/pom.xml" />
         <option value="$PROJECT_DIR$/patientMicroservice/pom.xml" />
+        <option value="$PROJECT_DIR$/diabeteMicroservice/pom.xml" />
       </list>
     </option>
   </component>

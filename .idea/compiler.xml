@@ -10,15 +10,6 @@
         <module name="gatewayMicroservice" />
         <module name="frontMicroservice" />
       </profile>
-      <profile name="Annotation profile for medecinMicroservice" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-        </processorPath>
-        <module name="medecinMicroservice" />
-      </profile>
       <profile name="Annotation profile for Developpez une solution en microservices pour votre client" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -28,10 +19,21 @@
         </processorPath>
         <module name="patientMicroservice" />
       </profile>
+      <profile name="Annotation profile for diabeteMicroservice" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="diabeteMicroservice" />
+        <module name="medecinMicroservice" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="diabeteMicroservice" options="-parameters" />
       <module name="frontMicroservice" options="-parameters" />
       <module name="gatewayMicroservice" options="-parameters" />
       <module name="medecinMicroservice" options="-parameters" />
