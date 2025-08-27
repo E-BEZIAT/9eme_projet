@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Création du microservice Diabete et ajout de la fonction créer une nouvelle note (spring 2/3)">
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/controller/DiabetesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/feign/MedecinFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/feign/PatientFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/model/RiskLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/model/response/DiabetesDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/model/response/NoteDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/model/response/PatientDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/service/DiabetesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/feign/DiabetesFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/response/DiabetesDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diabeteMicroservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/diabeteMicroservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/DiabeteMicroserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/DiabeteMicroserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/notes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayMicroservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayMicroservice/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/reponse/NoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/reponse/NoteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/service/NoteService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,22 +33,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "E-BEZIAT"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;E-BEZIAT&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/E-BEZIAT/9eme_projet.git",
-    "accountId": "91016dde-f308-4661-8ddd-6e9a95df374f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/E-BEZIAT/9eme_projet.git&quot;,
+    &quot;accountId&quot;: &quot;91016dde-f308-4661-8ddd-6e9a95df374f&quot;
   }
-}]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -54,6 +72,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication.executor": "Run",
+    "Spring Boot.DiabeteMicroserviceApplication.executor": "Run",
     "Spring Boot.FrontMicroserviceApplication.executor": "Run",
     "Spring Boot.GatewayMicroserviceApplication.executor": "Run",
     "Spring Boot.MedecinMicroserviceApplication.executor": "Run",
@@ -84,9 +103,10 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Compound.Unnamed">
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <toRun name="DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="DiabeteMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="FrontMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="GatewayMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="MedecinMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
@@ -95,6 +115,13 @@
     <configuration name="DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="patientMicroservice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example._eme_Projet.DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiabeteMicroserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="diabeteMicroservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.diabeteMicroservice.DiabeteMicroserviceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,6 +151,7 @@
     </configuration>
     <list>
       <item itemvalue="Compound.Unnamed" />
+      <item itemvalue="Spring Boot.DiabeteMicroserviceApplication" />
       <item itemvalue="Spring Boot.DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" />
       <item itemvalue="Spring Boot.FrontMicroserviceApplication" />
       <item itemvalue="Spring Boot.GatewayMicroserviceApplication" />
@@ -149,6 +177,7 @@
       <workItem from="1755978149989" duration="73000" />
       <workItem from="1755978250986" duration="657000" />
       <workItem from="1755979024566" duration="13571000" />
+      <workItem from="1756291457473" duration="3836000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />

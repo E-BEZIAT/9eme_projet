@@ -1,5 +1,4 @@
-package com.example.medecinmicroservice.module.reponse;
-
+package com.example.diabeteMicroservice.model.response;
 
 import lombok.ToString;
 

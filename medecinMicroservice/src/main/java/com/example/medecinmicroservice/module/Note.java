@@ -2,8 +2,6 @@ package com.example.medecinmicroservice.module;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -25,12 +23,6 @@ public class Note {
 
     public Note(String id, int patientId, LocalDateTime dateOfVisit, String note) {
         this.id = id;
-        this.patientId = patientId;
-        this.dateOfVisit = dateOfVisit;
-        this.note = note;
-    }
-
-    public Note(int patientId, LocalDateTime dateOfVisit, String note) {
         this.patientId = patientId;
         this.dateOfVisit = dateOfVisit;
         this.note = note;

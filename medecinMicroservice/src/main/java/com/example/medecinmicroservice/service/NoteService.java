@@ -19,7 +19,7 @@ public class NoteService {
 
     public void createNote(NoteDTO noteDTO) {
         Note note = new Note(
-                noteDTO.getId(),
+                null,
                 noteDTO.getPatientId(),
                 noteDTO.getDateOfVisit(),
                 noteDTO.getNote()

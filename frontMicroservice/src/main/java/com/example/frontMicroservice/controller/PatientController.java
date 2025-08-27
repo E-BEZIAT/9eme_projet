@@ -1,12 +1,10 @@
 package com.example.frontMicroservice.controller;
 
+import com.example.frontMicroservice.feign.DiabetesFeign;
 import com.example.frontMicroservice.feign.MedecinFeign;
 import com.example.frontMicroservice.feign.PatientFeign;
 import com.example.frontMicroservice.parameter.PatientParameter;
-import com.example.frontMicroservice.response.NoteDTO;
-import com.example.frontMicroservice.response.PatientDTO;
-import com.example.frontMicroservice.response.PatientWithNotesDTO;
-import com.example.frontMicroservice.response.UserDTO;
+import com.example.frontMicroservice.response.*;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
@@ -26,10 +24,12 @@ public class PatientController {
 
     private final PatientFeign patientFeign;
     private final MedecinFeign medecinFeign;
+    private final DiabetesFeign diabetesFeign;
 
-    public PatientController(PatientFeign patientFeign, MedecinFeign medecinFeign) {
+    public PatientController(PatientFeign patientFeign, MedecinFeign medecinFeign, DiabetesFeign diabetesFeign) {
         this.patientFeign = patientFeign;
         this.medecinFeign = medecinFeign;
+        this.diabetesFeign = diabetesFeign;
     }
 
     @GetMapping("/{id}")
@@ -99,20 +99,17 @@ public class PatientController {
     public String notesForm(@PathVariable("id") int id, Model model) {
         PatientDTO patientDTO = patientFeign.getPatientById(id);
         List<NoteDTO> notesDTO = medecinFeign.getNotesByPatientId(id);
+        DiabetesDTO diabetesDTO = diabetesFeign.getRiskOfDiabetesByPatientId(id);
 
         PatientWithNotesDTO patientWithNotesDTO = new PatientWithNotesDTO();
         patientWithNotesDTO.setPatientDTO(patientDTO);
         patientWithNotesDTO.setNotes(notesDTO);
 
         model.addAttribute("patientWithNotesDTO", patientWithNotesDTO);
+        model.addAttribute("diabetes", diabetesDTO);
         return "patient/notes";
     }
 
-    /**@GetMapping("/note/create")
-    public String createNote(Model model) {
-        model.addAttribute("note", new NoteDTO());
-        return "patient/notes";
-    }**/
 
     @PostMapping("/notes/create/{id}")
     public String createNote(
@@ -131,7 +128,7 @@ public class PatientController {
 
         model.addAttribute("message", "Note créée avec succès");
 
-        return "redirect:/patient/notes/" + patientId;
+        return "redirect:http://localhost:8080/patient/notes/" + patientId;
     }
 
 }
