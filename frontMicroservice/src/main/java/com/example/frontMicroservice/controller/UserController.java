@@ -30,21 +30,4 @@ public class UserController {
         model.addAttribute("message", "Utilisateur créé avec succès");
         return "login";
     }
-
-    /**@GetMapping("/user/user")
-    public String getUser(Model model, HttpSession session) {
-
-        String username = (String) session.getAttribute("username");
-
-        if (username == null || username.isEmpty()) {
-            throw new RuntimeException("Utilisateur introuvable en session");
-        }
-
-        UserParameter user = patientFeign.readUser(username);
-        model.addAttribute("user", user);
-
-        return "user/user";
-    }**/
-
-
 }

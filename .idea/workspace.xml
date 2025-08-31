@@ -4,31 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Création du microservice Diabete et ajout de la fonction créer une nouvelle note (spring 2/3)">
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/controller/DiabetesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/feign/MedecinFeign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/feign/PatientFeign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/model/RiskLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/model/response/DiabetesDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/model/response/NoteDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/model/response/PatientDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/service/DiabetesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/feign/DiabetesFeign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/response/DiabetesDTO.java" afterDir="false" />
+    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Ajout de la méthode getRIskOfDiabeteByPatient (spring 3)">
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/test/java/com/example/diabeteMicroservice/serviceTest/DiabetesServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/medecinMicroservice/src/test/java/com/example/medecinmicroservice/serviceTest/NoteServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientMicroservice/src/test/java/com/example/_eme_Projet/serviceTest/PatientServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientMicroservice/src/test/java/com/example/_eme_Projet/serviceTest/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diabeteMicroservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/diabeteMicroservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/DiabeteMicroserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/DiabeteMicroserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/service/DiabetesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/service/DiabetesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/notes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayMicroservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayMicroservice/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/reponse/NoteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/reponse/NoteDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/service/NoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,6 +67,24 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.DiabetesServiceTest.calculateAgeTest.executor": "Run",
+    "JUnit.DiabetesServiceTest.countTriggerWordsTestFour.executor": "Run",
+    "JUnit.DiabetesServiceTest.countTriggerWordsTestZero.executor": "Run",
+    "JUnit.DiabetesServiceTest.determineRiskLevelTestBorderline.executor": "Run",
+    "JUnit.DiabetesServiceTest.determineRiskLevelTestEarlyOnset.executor": "Run",
+    "JUnit.DiabetesServiceTest.determineRiskLevelTestInDanger.executor": "Run",
+    "JUnit.DiabetesServiceTest.determineRiskLevelTestNone.executor": "Run",
+    "JUnit.DiabetesServiceTest.diabetesReportTest.executor": "Run",
+    "JUnit.NoteServiceTest.createNoteTest.executor": "Run",
+    "JUnit.NoteServiceTest.getNoteByPatientIdTest.executor": "Run",
+    "JUnit.PatientServiceTest.createPatientErrorAlreadyExistTest.executor": "Run",
+    "JUnit.PatientServiceTest.createPatientTest.executor": "Run",
+    "JUnit.PatientServiceTest.deletePatientTest.executor": "Run",
+    "JUnit.PatientServiceTest.readPatientErrorTest.executor": "Run",
+    "JUnit.PatientServiceTest.readPatientTest.executor": "Run",
+    "JUnit.PatientServiceTest.updatePatientErrorTest.executor": "Run",
+    "JUnit.PatientServiceTest.updatePatientTest.executor": "Run",
+    "JUnit.UserServiceTest.createUserTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -103,7 +122,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Compound.Unnamed">
+  <component name="RunManager">
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <toRun name="DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="DiabeteMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
@@ -111,6 +130,86 @@
       <toRun name="GatewayMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="MedecinMicroserviceApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
+    </configuration>
+    <configuration name="PatientServiceTest.deletePatientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patientMicroservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example._eme_Projet.serviceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example._eme_Projet.serviceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example._eme_Projet.serviceTest.PatientServiceTest" />
+      <option name="METHOD_NAME" value="deletePatientTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceTest.readAllPatientsErrorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patientMicroservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example._eme_Projet.serviceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example._eme_Projet.serviceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example._eme_Projet.serviceTest.PatientServiceTest" />
+      <option name="METHOD_NAME" value="readAllPatientsErrorTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceTest.readAllPatientsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patientMicroservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example._eme_Projet.serviceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example._eme_Projet.serviceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example._eme_Projet.serviceTest.PatientServiceTest" />
+      <option name="METHOD_NAME" value="readAllPatientsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceTest.readPatientErrorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patientMicroservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example._eme_Projet.serviceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example._eme_Projet.serviceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example._eme_Projet.serviceTest.PatientServiceTest" />
+      <option name="METHOD_NAME" value="readPatientErrorTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceTest.readPatientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="patientMicroservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example._eme_Projet.serviceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example._eme_Projet.serviceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example._eme_Projet.serviceTest.PatientServiceTest" />
+      <option name="METHOD_NAME" value="readPatientTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="patientMicroservice" />
@@ -151,12 +250,26 @@
     </configuration>
     <list>
       <item itemvalue="Compound.Unnamed" />
+      <item itemvalue="JUnit.PatientServiceTest.deletePatientTest" />
+      <item itemvalue="JUnit.PatientServiceTest.readAllPatientsErrorTest" />
+      <item itemvalue="JUnit.PatientServiceTest.readAllPatientsTest" />
+      <item itemvalue="JUnit.PatientServiceTest.readPatientErrorTest" />
+      <item itemvalue="JUnit.PatientServiceTest.readPatientTest" />
       <item itemvalue="Spring Boot.DiabeteMicroserviceApplication" />
       <item itemvalue="Spring Boot.DeveloppezUneSolutionEnMicroservicesPourVotreClientApplication" />
       <item itemvalue="Spring Boot.FrontMicroserviceApplication" />
       <item itemvalue="Spring Boot.GatewayMicroserviceApplication" />
       <item itemvalue="Spring Boot.MedecinMicroserviceApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PatientServiceTest.readAllPatientsErrorTest" />
+        <item itemvalue="JUnit.PatientServiceTest.readAllPatientsTest" />
+        <item itemvalue="JUnit.PatientServiceTest.readPatientErrorTest" />
+        <item itemvalue="JUnit.PatientServiceTest.readPatientTest" />
+        <item itemvalue="JUnit.PatientServiceTest.deletePatientTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -178,6 +291,8 @@
       <workItem from="1755978250986" duration="657000" />
       <workItem from="1755979024566" duration="13571000" />
       <workItem from="1756291457473" duration="3836000" />
+      <workItem from="1756336347888" duration="5016000" />
+      <workItem from="1756464715636" duration="8700000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -203,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756130023261</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ajout de la méthode getRIskOfDiabeteByPatient (spring 3)">
+      <option name="closed" value="true" />
+      <created>1756336453200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756336453200</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +347,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="Corrections pour l'affichage des notes" />
     <MESSAGE value="Création du microservice Diabete et ajout de la fonction créer une nouvelle note (spring 2/3)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Création du microservice Diabete et ajout de la fonction créer une nouvelle note (spring 2/3)" />
+    <MESSAGE value="Ajout de la fonction getRIskOfDiabeteByPatient (spring 3)" />
+    <MESSAGE value="Ajout de la méthode getRIskOfDiabeteByPatient (spring 3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la méthode getRIskOfDiabeteByPatient (spring 3)" />
   </component>
 </project>

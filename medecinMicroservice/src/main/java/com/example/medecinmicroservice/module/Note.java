@@ -28,6 +28,8 @@ public class Note {
         this.note = note;
     }
 
+    public Note(int patientId, LocalDateTime dateOfVisit, String note) {}
+
     public String getId() {
         return id;
     }

@@ -64,7 +64,7 @@ public class PatientController {
         patientFeign.updatePatient(id, patientParameter);
 
         model.addAttribute("success", true);
-        return "redirect:/patient/" + id;
+        return "redirect:http://localhost:8080/patient/" + id;
 
     }
 

@@ -36,52 +36,8 @@ public class UserService {
         userRepository.save(newUser);
     }
 
-    public void updateUser(UserParameter userParameter, String oldUsername) {
-        User user = userRepository.findByUsername(oldUsername);
-
-        if (user == null) {
-            throw new IllegalArgumentException("Utilisateur introuvable");
-        }
-
-        String newUsername = userParameter.getUsername();
-        if (newUsername != null && !newUsername.equals(oldUsername) && !newUsername.isBlank()) {
-
-            if(userRepository.findByUsername(newUsername) != null) {
-                throw new IllegalArgumentException("Ce nom d'utilisateur n'est pas disponible.");
-            }
-
-            user.setUsername(newUsername);
-        }
-
-        if(userParameter.getPassword() != null && !userParameter.getPassword().isBlank()) {
-            String encodedPassword = passwordEncoder.encode(userParameter.getPassword());
-            user.setPassword(encodedPassword);
-        }
-
-        if(userParameter.getEmail() != null && !userParameter.getEmail().isBlank()) {
-            user.setEmail(userParameter.getEmail());
-        }
-
-        userRepository.save(user);
-    }
-
     public void deleteUser(int id) {
         userRepository.deleteById(id);
-    }
-
-    public UserParameter readUser(String username) {
-        User user = userRepository.findByUsername(username);
-
-        if (user == null) {
-            throw new RuntimeException("Utilisateur introuvable");
-        }
-
-        UserParameter userParameter = new UserParameter();
-        userParameter.setId(user.getId());
-        userParameter.setUsername(user.getUsername());
-        userParameter.setEmail(user.getEmail());
-
-        return userParameter;
     }
 
 

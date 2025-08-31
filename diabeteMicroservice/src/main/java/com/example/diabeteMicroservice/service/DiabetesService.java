@@ -25,7 +25,7 @@ public class DiabetesService {
 
     private static final String[] TRIGGERSLIST = {
             "Hémoglobine A1C", "Microalbumine", "Taille", "Poids",
-            "Fumeur", "Fumeuse", "Anormal", "Cholestérol",
+            "Fumeur", "Fumeuse", "Fume", "Fumer", "Anormal", "Cholestérol",
             "Vertiges", "Rechute", "Réaction", "Anticorps"
     };
 

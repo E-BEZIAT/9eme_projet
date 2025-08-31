@@ -23,25 +23,7 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
-    /**@GetMapping("/user/user")
-    public String updateUserForm(Model model, @RequestHeader("userX") String username) {
-
-        if (username == null || username.isEmpty()) {
-            throw new RuntimeException("Utilisateur non trouvé en session");
-        }
-
-        UserParameter userParam = userService.readUser(username);
-        model.addAttribute("user", userParam);
-
-        return "user/user";
-    }**/
-
-    /**@GetMapping("user/{username}")
-    public ResponseEntity<UserParameter> getUserByUsername(@PathVariable("username") String username) {
-        UserParameter user = userService.readUser(username);
-        return ResponseEntity.ok(user);
-    }**/
-
+    @Deprecated
     @PostMapping("/user/delete")
     public void deleteUser(@RequestParam int id) {
         userService.deleteUser(id);

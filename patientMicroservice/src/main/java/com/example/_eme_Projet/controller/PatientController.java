@@ -33,6 +33,7 @@ public class PatientController {
     }
 
     //affiche la page de création du patient
+    @Deprecated
     @GetMapping("/create")
     public ResponseEntity<PatientParameter> createPatientForm() {
         return ResponseEntity.ok(new PatientParameter());
