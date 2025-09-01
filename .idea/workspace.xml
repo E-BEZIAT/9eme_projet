@@ -4,31 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Ajout de la mise en page des pages front">
+    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Nettoyage et commentaire du code">
+      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontMicroservice/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatewayMicroservice/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/medecinMicroservice/dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/controller/DiabetesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/controller/DiabetesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/service/DiabetesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/service/DiabetesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diabeteMicroservice/src/test/java/com/example/diabeteMicroservice/serviceTest/DiabetesServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/diabeteMicroservice/src/test/java/com/example/diabeteMicroservice/serviceTest/DiabetesServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/feign/PatientFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/feign/PatientFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/controller/NoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/feign/PatientFeign.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/parameter/NoteParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/parameter/NoteParameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/service/NoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/configuration/SpringSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/configuration/SpringSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/model/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/PatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/test/java/com/example/_eme_Projet/serviceTest/PatientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/test/java/com/example/_eme_Projet/serviceTest/PatientServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/test/java/com/example/_eme_Projet/serviceTest/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/test/java/com/example/_eme_Projet/serviceTest/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientMicroservice/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientMicroservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +100,7 @@
     "Spring Boot.MedecinMicroserviceApplication.executor": "Run",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/BEZIAT/Documents/Formation_dev/7eme projet/JavaDA_PROJECT7_RESTAPI",
+    "last_opened_file_path": "C:/Users/BEZIAT/Documents/Formation_dev/9eme_projet",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -313,7 +297,8 @@
       <workItem from="1756291457473" duration="3836000" />
       <workItem from="1756336347888" duration="5016000" />
       <workItem from="1756464715636" duration="13985000" />
-      <workItem from="1756734540332" duration="9924000" />
+      <workItem from="1756734540332" duration="11161000" />
+      <workItem from="1756746504745" duration="4487000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -363,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756742324905</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Nettoyage et commentaire du code">
+      <option name="closed" value="true" />
+      <created>1756744640381</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756744640381</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,6 +381,7 @@
     <MESSAGE value="Ajout de la méthode getRIskOfDiabeteByPatient (spring 3)" />
     <MESSAGE value="Ajout des test unitaires pour les méthodes des services" />
     <MESSAGE value="Ajout de la mise en page des pages front" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la mise en page des pages front" />
+    <MESSAGE value="Nettoyage et commentaire du code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nettoyage et commentaire du code" />
   </component>
 </project>
