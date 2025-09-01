@@ -10,7 +10,10 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 @Service
 public class DiabetesService {
@@ -23,11 +26,22 @@ public class DiabetesService {
         this.medecinFeign = medecinFeign;
     }
 
-    private static final String[] TRIGGERSLIST = {
-            "Hémoglobine A1C", "Microalbumine", "Taille", "Poids",
-            "Fumeur", "Fumeuse", "Fume", "Fumer", "Anormal", "Cholestérol",
-            "Vertiges", "Rechute", "Réaction", "Anticorps"
-    };
+    private static final Map<String, String> TRIGGERS_MAP = Map.ofEntries(
+            Map.entry("fumeur", "tabac"),
+            Map.entry("fumeuse", "tabac"),
+            Map.entry("fume", "tabac"),
+            Map.entry("fumer", "tabac"),
+            Map.entry("hémoglobine a1c", "hemoglobine"),
+            Map.entry("microalbumine", "microalbumine"),
+            Map.entry("taille", "taille"),
+            Map.entry("poids", "poids"),
+            Map.entry("anormal", "anormal"),
+            Map.entry("cholestérol", "cholesterol"),
+            Map.entry("vertiges", "vertiges"),
+            Map.entry("rechute", "rechute"),
+            Map.entry("réaction", "reaction"),
+            Map.entry("anticorps", "anticorps")
+    );
 
     public int calculateAge(String birthDate) {
         LocalDate birth = LocalDate.parse(birthDate);
@@ -35,16 +49,16 @@ public class DiabetesService {
     }
 
     public int countTriggersWords(List<NoteDTO> noteDTO) {
-        int counter = 0;
+        Set<String> foundTriggers = new HashSet<>();
         for (NoteDTO note : noteDTO) {
             String text = note.getNote().toLowerCase();
-            for (String trigger : TRIGGERSLIST) {
-                if (text.contains(trigger.toLowerCase())) {
-                    counter++;
+            for (Map.Entry<String, String> entry : TRIGGERS_MAP.entrySet()) {
+                if (text.contains(entry.getKey().toLowerCase())) {
+                    foundTriggers.add(entry.getValue());
                 }
             }
         }
-        return counter;
+        return foundTriggers.size();
     }
 
     public RiskLevel determineRiskLevel(String gender, int age, int triggerCount) {

@@ -17,6 +17,11 @@ public class DiabetesController {
         this.diabetesService = diabetesService;
     }
 
+    /** Ce controller retourne le risque de diabète pour un patient (identifié avec son id -> patientId)
+     *
+     * @param patientId
+     * @return
+     */
     @GetMapping("/{patientId}")
     public DiabetesDTO getRiskOfDiabetesByPatientId(@PathVariable("patientId") int patientId) {
         return diabetesService.diabetesReport(patientId);

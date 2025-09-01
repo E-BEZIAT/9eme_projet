@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Ajout de la méthode getRIskOfDiabeteByPatient (spring 3)">
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/src/test/java/com/example/diabeteMicroservice/serviceTest/DiabetesServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/medecinMicroservice/src/test/java/com/example/medecinmicroservice/serviceTest/NoteServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientMicroservice/src/test/java/com/example/_eme_Projet/serviceTest/PatientServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientMicroservice/src/test/java/com/example/_eme_Projet/serviceTest/UserServiceTest.java" afterDir="false" />
+    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Ajout des test unitaires pour les méthodes des services">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/service/DiabetesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/diabeteMicroservice/src/main/java/com/example/diabeteMicroservice/service/DiabetesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/medecinMicroservice/src/main/java/com/example/medecinmicroservice/module/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/PatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/notes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -67,6 +65,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "JUnit.DiabetesServiceTest.calculateAgeTest.executor": "Run",
     "JUnit.DiabetesServiceTest.countTriggerWordsTestFour.executor": "Run",
     "JUnit.DiabetesServiceTest.countTriggerWordsTestZero.executor": "Run",
@@ -75,11 +74,15 @@
     "JUnit.DiabetesServiceTest.determineRiskLevelTestInDanger.executor": "Run",
     "JUnit.DiabetesServiceTest.determineRiskLevelTestNone.executor": "Run",
     "JUnit.DiabetesServiceTest.diabetesReportTest.executor": "Run",
+    "JUnit.DiabetesServiceTest.executor": "Run",
     "JUnit.NoteServiceTest.createNoteTest.executor": "Run",
     "JUnit.NoteServiceTest.getNoteByPatientIdTest.executor": "Run",
     "JUnit.PatientServiceTest.createPatientErrorAlreadyExistTest.executor": "Run",
     "JUnit.PatientServiceTest.createPatientTest.executor": "Run",
     "JUnit.PatientServiceTest.deletePatientTest.executor": "Run",
+    "JUnit.PatientServiceTest.executor": "Run",
+    "JUnit.PatientServiceTest.readAllPatientsErrorTest.executor": "Run",
+    "JUnit.PatientServiceTest.readAllPatientsTest.executor": "Run",
     "JUnit.PatientServiceTest.readPatientErrorTest.executor": "Run",
     "JUnit.PatientServiceTest.readPatientTest.executor": "Run",
     "JUnit.PatientServiceTest.updatePatientErrorTest.executor": "Run",
@@ -98,6 +101,7 @@
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/BEZIAT/Documents/Formation_dev/9eme_projet/diabeteMicroservice",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -292,7 +296,8 @@
       <workItem from="1755979024566" duration="13571000" />
       <workItem from="1756291457473" duration="3836000" />
       <workItem from="1756336347888" duration="5016000" />
-      <workItem from="1756464715636" duration="8700000" />
+      <workItem from="1756464715636" duration="13985000" />
+      <workItem from="1756734540332" duration="7477000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -326,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756336453200</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout des test unitaires pour les méthodes des services">
+      <option name="closed" value="true" />
+      <created>1756647980997</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756647980997</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +362,7 @@
     <MESSAGE value="Création du microservice Diabete et ajout de la fonction créer une nouvelle note (spring 2/3)" />
     <MESSAGE value="Ajout de la fonction getRIskOfDiabeteByPatient (spring 3)" />
     <MESSAGE value="Ajout de la méthode getRIskOfDiabeteByPatient (spring 3)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la méthode getRIskOfDiabeteByPatient (spring 3)" />
+    <MESSAGE value="Ajout des test unitaires pour les méthodes des services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout des test unitaires pour les méthodes des services" />
   </component>
 </project>

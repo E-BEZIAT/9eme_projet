@@ -3,50 +3,88 @@
 <head>
     <title>Notes du patient</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <style>
+        .risk-none { background-color: #198754; }
+        .risk-danger { background-color: #dc3545; }
+    </style>
 </head>
-<body class="container mt-4">
-<div class="col-6">
-    <a th:href="@{/home}">MédiLabo Solutions</a>
-</div>
-<div>
-    <form th:action="@{/logout}" method="POST">
-        <input type="submit" value="Logout"/>
-    </form>
-</div>
-
-<h2 th:text="'Notes pour ' + ${patientWithNotesDTO.patientDTO.firstName} + ' ' + ${patientWithNotesDTO.patientDTO.lastName}"></h2>
-
-<div>
-    <p><strong>Âge :</strong> [[${diabetes.age}]] ans</p>
-    <p><strong>Risque de diabète :</strong> [[${diabetes.riskLevel}]]</p>
-</div>
-
-<form th:action="@{/patient/notes/create/{id}(id=${patientWithNotesDTO.patientDTO.id})}" method="post" class="mb-4">
-
-    <input type="hidden" name="patientId" th:value="${patientWithNotesDTO.patientDTO.id}"/>
-
-    <div class="mb-3">
-        <label for="note" class="form-label">Nouvelle note</label>
-        <textarea class="form-control" id="note" name="note" rows="3" required></textarea>
+<body class="container-fluid p-0">
+<div class="top-bar bg-dark text-white d-flex justify-content-between align-items-center px-4 py-3">
+    <h2 class="m-0 text-danger fw-bold">MédiLabo Solution</h2>
+    <div class="d-flex gap-2">
+        <a th:href="@{/home}" class="btn btn-outline-light btn-sm">Liste des patients</a>
+        <form th:action="@{/logout}" method="post" class="m-0">
+            <button type="submit" class="btn btn-light btn-sm">Déconnexion</button>
+        </form>
     </div>
-    <button type="submit" class="btn btn-primary">Ajouter la note</button>
-</form>
+</div>
 
-<h4>Historique des notes</h4>
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Contenu</th>
-        <th>Date</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="note : ${patientWithNotesDTO.notes}">
-        <td th:text="${note.note}"></td>
-        <td th:text="${#temporals.format(note.dateOfVisit, 'dd/MM/yyyy HH:mm')}"></td>
-    </tr>
-    </tbody>
-</table>
+<div class="text-white text-center py-2"
+     th:classappend="${diabetes.riskLevel == 'NONE'} ? ' risk-none' : ' risk-danger'">
+    <h5 class="mb-0">Indicateur de diabète :
+        <span th:text="${diabetes.riskLevel}"></span>
+    </h5>
+</div>
 
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-light text-center fw-bold">
+                Ajouter une note
+            </div>
+        <div class="card-body">
+        <form th:action="@{/patient/notes/create/{id}(id=${patientWithNotesDTO.patientDTO.id})}" method="post" class="mb-4">
+
+            <input type="hidden" name="patientId" th:value="${patientWithNotesDTO.patientDTO.id}"/>
+
+            <div class="mb-3">
+                <label for="note" class="form-label">Nouvelle note</label>
+                <textarea class="form-control" id="note" name="note" rows="3" required></textarea>
+            </div>
+            <div class="text-end">
+                <button type="submit" class="btn btn-primary">Ajouter la note</button>
+            </div>
+        </form>
+        </div>
+        </div>
+
+         <div class="card shadow-sm">
+         <div class="card-header bg-light text-center fw-bold">
+              Notes des visites
+         </div>
+         <div class="card-body">
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                <tr>
+                    <th>Contenu</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="note : ${patientWithNotesDTO.notes}">
+                    <td th:text="${note.note}"></td>
+                    <td th:text="${#temporals.format(note.dateOfVisit, 'dd/MM/yyyy HH:mm')}"></td>
+                </tr>
+                </tbody>
+            </table>
+         </div>
+         </div>
+    </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-light text-center fw-bold">
+                    Informations du patient
+                </div>
+                <div class="card-body">
+                    <p><strong>Nom :</strong> <span th:text="${patientWithNotesDTO.patientDTO.lastName}"></span></p>
+                    <p><strong>Prénom :</strong> <span th:text="${patientWithNotesDTO.patientDTO.firstName}"></span></p>
+                    <p><strong>Âge :</strong> <span th:text="${diabetes.age}"></span> ans</p>
+                    <p><strong>Genre :</strong> <span th:text="${patientWithNotesDTO.patientDTO.gender}"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -72,7 +72,7 @@ public class PatientController {
     public String patientDelete(@PathVariable("id") int id, Model model) {
         patientFeign.deletePatient(id);
         model.addAttribute("success", true);
-        return "redirect:/home";
+        return "redirect:http://localhost:8080/home";
     }
 
     @GetMapping("/create")
@@ -92,7 +92,7 @@ public class PatientController {
 
         patientFeign.createPatient(patientParameter);
         model.addAttribute("message", "Patient créé avec succès");
-        return "redirect:/home";
+        return "redirect:http://localhost:8080/home";
     }
 
     @GetMapping("/notes/{id}")
