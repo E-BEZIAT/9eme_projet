@@ -20,6 +20,12 @@ public class HomeController {
         this.patientFeign = patientFeign;
     }
 
+    /** Retourne la page home
+     *
+     * @param model modèle from view
+     * @param session get and stock username
+     * @return home
+     */
     @GetMapping("/home")
     public String home(Model model, HttpSession session) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

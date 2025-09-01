@@ -1,13 +1,10 @@
 package com.example.medecinmicroservice.controller;
 
-import com.example.medecinmicroservice.module.parameter.NoteParameter;
 import com.example.medecinmicroservice.module.reponse.NoteDTO;
 import com.example.medecinmicroservice.service.NoteService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -20,11 +17,21 @@ public class NoteController {
         this.noteService = noteService;
     }
 
+    /** Retourne les notes d'un patient en utilisant son id -> patientId
+     *
+     * @param patientId id of patient
+     * @return notes
+     */
     @GetMapping("/patient/{patientId}")
     public List<NoteDTO> getNotesByPatientId(@PathVariable("patientId") int patientId) {
         return noteService.getNotesByPatientId(patientId);
     }
 
+    /** Retourne la méthode de création de note
+     *
+     * @param noteDTO body for create
+     * @return createNote method
+     */
     @PostMapping("/create")
     public ResponseEntity<String> createNote(@RequestBody NoteDTO noteDTO) {
         noteService.createNote(noteDTO);

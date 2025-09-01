@@ -3,9 +3,11 @@ package com.example.frontMicroservice.feign;
 import com.example.frontMicroservice.parameter.PatientParameter;
 import com.example.frontMicroservice.parameter.UserParameter;
 import com.example.frontMicroservice.response.PatientDTO;
-import com.example.frontMicroservice.response.UserDTO;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -26,9 +28,6 @@ public interface PatientFeign {
 
     @PostMapping("user/register")
     void createUser(@RequestBody UserParameter user);
-
-    /**@GetMapping("/user/{username}")
-    UserParameter readUser(@PathVariable("username") String username);**/
 
     @PostMapping("/patient/create")
     void createPatient(@RequestBody PatientParameter patient);

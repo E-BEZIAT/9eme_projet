@@ -43,11 +43,21 @@ public class DiabetesService {
             Map.entry("anticorps", "anticorps")
     );
 
+    /** Ce service calcul l'âge en faisant la différence entre la date du jour et la date de naissance
+     *
+     * @param birthDate birthDate
+     * @return age of patient
+     */
     public int calculateAge(String birthDate) {
         LocalDate birth = LocalDate.parse(birthDate);
         return Period.between(birth, LocalDate.now()).getYears();
     }
 
+    /** Ce service compte le nombre de mot trigger dans les notes des patients
+     *
+     * @param noteDTO note
+     * @return number of triggers words
+     */
     public int countTriggersWords(List<NoteDTO> noteDTO) {
         Set<String> foundTriggers = new HashSet<>();
         for (NoteDTO note : noteDTO) {
@@ -61,6 +71,14 @@ public class DiabetesService {
         return foundTriggers.size();
     }
 
+    /** Ce service détermine le niveau de risque en fonction du nombre de mots triggers comptés dans le service
+     * précédent
+     *
+     * @param gender Male or female
+     * @param age age of patient
+     * @param triggerCount triggers words
+     * @return risk of diabetes
+     */
     public RiskLevel determineRiskLevel(String gender, int age, int triggerCount) {
         if (triggerCount == 0) {
             return RiskLevel.NONE;
@@ -97,6 +115,11 @@ public class DiabetesService {
             return RiskLevel.NONE;
     }
 
+    /** Ce service renvoie les patients avec leur risque de diabète
+     *
+     * @param patientId id of patient
+     * @return diabetesDTO
+     */
     public DiabetesDTO diabetesReport(int patientId) {
         PatientDTO patientDTO = patientFeign.getPatientById(patientId);
         List<NoteDTO> notesDTO = medecinFeign.getNotesByPatientId(patientId);

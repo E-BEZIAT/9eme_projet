@@ -21,6 +21,10 @@ public class PatientService {
         this.patientRepository = patientRepository;
     }
 
+    /** Méthode pour créer un patient
+     *
+     * @param patientParameter body for create
+     */
     public void createNewPatient(PatientParameter patientParameter) {
         Optional<Patient> patient = patientRepository.findByFirstNameAndLastName(
                 patientParameter.getFirstName(),
@@ -43,6 +47,11 @@ public class PatientService {
         patientRepository.save(newPatient);
     }
 
+    /** Méthode pour modifier les informations d'un patient
+     *
+     * @param patientParameter body for update
+     * @param id id of patient
+     */
     public void updatePatient(PatientParameter patientParameter, int id) {
         Patient patient = patientRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Patient introuvable"));
@@ -57,10 +66,19 @@ public class PatientService {
         patientRepository.save(patient);
     }
 
+    /** Méthode pour supprimer un patient
+     *
+     * @param id id of patient
+     */
     public void deletePatient(int id) {
         patientRepository.deleteById(id);
     }
 
+    /** Méthode pour récupérer les informations d'un patient
+     *
+     * @param id id of patient
+     * @return patient informations
+     */
     public Patient readPatient(int id) {
         Patient patient = patientRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Patient introuvable"));
@@ -76,6 +94,10 @@ public class PatientService {
         );
     }
 
+    /** Méthode pour récupérer tous les patients
+     *
+     * @return All patients
+     */
     public List<PatientDTO> readAllPatients() {
         return patientRepository.findAll()
                 .stream()

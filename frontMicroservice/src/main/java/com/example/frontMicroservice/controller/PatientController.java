@@ -32,6 +32,13 @@ public class PatientController {
         this.diabetesFeign = diabetesFeign;
     }
 
+    /** retourne la fiche d'un patient
+     *
+     * @param id id of patient
+     * @param model model from view
+     * @param session get and stock username
+     * @return /patient/update
+     */
     @GetMapping("/{id}")
     public String patientForm(@PathVariable("id") int id, Model model, HttpSession session) {
         PatientDTO patientDTO = patientFeign.getPatientById(id);
@@ -51,6 +58,14 @@ public class PatientController {
         return "patient/update";
     }
 
+    /** Modifie les information d'un patient
+     *
+     * @param id id of patient
+     * @param patientParameter body for update
+     * @param result check if there is no error from parameters in the body
+     * @param model model from view
+     * @return /patient/{id}
+     */
     @PostMapping("/update/{id}")
     public String patientUpdate(
             @PathVariable("id") int id,
@@ -68,6 +83,12 @@ public class PatientController {
 
     }
 
+    /** Supprime un patient
+     *
+     * @param id id of patient
+     * @param model model from view
+     * @return /home
+     */
     @PostMapping("/delete/{id}")
     public String patientDelete(@PathVariable("id") int id, Model model) {
         patientFeign.deletePatient(id);
@@ -75,12 +96,24 @@ public class PatientController {
         return "redirect:http://localhost:8080/home";
     }
 
+    /** Affiche la page de création de patient
+     *
+     * @param model model from view
+     * @return /patient/create
+     */
     @GetMapping("/create")
     public String createPatient(Model model) {
         model.addAttribute("patient", new PatientParameter());
         return "patient/create";
     }
 
+    /** Créer un nouveau patient
+     *
+     * @param patientParameter body for create
+     * @param result check if there is no error from parameters in the body
+     * @param model model from view
+     * @return /home
+     */
     @PostMapping("/create")
     public String createPatient(
             @Valid @ModelAttribute("patient") PatientParameter patientParameter,
@@ -95,6 +128,12 @@ public class PatientController {
         return "redirect:http://localhost:8080/home";
     }
 
+    /** Affiches les notes d'un patient
+     *
+     * @param id id of patient
+     * @param model model from view
+     * @return /patient/notes
+     */
     @GetMapping("/notes/{id}")
     public String notesForm(@PathVariable("id") int id, Model model) {
         PatientDTO patientDTO = patientFeign.getPatientById(id);
@@ -110,7 +149,14 @@ public class PatientController {
         return "patient/notes";
     }
 
-
+    /** Créer une nouvelle note pour un patient
+     *
+     * @param patientId id of patient
+     * @param noteDTO body for create
+     * @param result check if there is no error from parameters in the body
+     * @param model model from view
+     * @return /patient/notes/{id}
+     */
     @PostMapping("/notes/create/{id}")
     public String createNote(
             @PathVariable("id") int patientId,

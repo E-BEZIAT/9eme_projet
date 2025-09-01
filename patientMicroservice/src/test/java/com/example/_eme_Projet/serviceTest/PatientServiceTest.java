@@ -185,8 +185,24 @@ public class PatientServiceTest {
 
     @Test
     public void readAllPatientsTest() {
-        Patient patient1 = new Patient(1, "Doe", "John", LocalDate.of(1990, 1, 1), "M", "123 Street", "0102030405");
-        Patient patient2 = new Patient(2, "Smith", "Jane", LocalDate.of(1992, 5, 10), "F", "456 Avenue", "0203040506");
+        Patient patient1 = new Patient(
+                1,
+                "Doe",
+                "John",
+                LocalDate.of(1990, 1, 1),
+                "M",
+                "123 Street",
+                "0102030405"
+        );
+        Patient patient2 = new Patient(
+                2,
+                "Smith",
+                "Jane",
+                LocalDate.of(1992, 5, 10),
+                "F",
+                "456 Avenue",
+                "0203040506"
+        );
 
         List<Patient> patients = Arrays.asList(patient1, patient2);
 

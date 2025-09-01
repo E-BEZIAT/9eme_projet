@@ -23,6 +23,12 @@ public class LoginController {
         this.passwordEncoder = passwordEncoder;
     }
 
+    /** Valide l'utilisateur lors de sa connexion
+     *
+     * @param username username of user
+     * @param password password of user
+     * @return authorize or not for user connection
+     */
     @PostMapping("/validate-user")
     public ResponseEntity<Void> validateUser(@RequestParam String username,
                                              @RequestParam String password) {

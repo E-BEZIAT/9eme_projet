@@ -8,6 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class LoginController {
 
+    /** retourne la page de connexion
+     *
+     * @param error error
+     * @param model model from view
+     * @return login
+     */
     @GetMapping("/login")
     public String login(@RequestParam(value = "error", required = false) String error, Model model) {
         if (error != null) {

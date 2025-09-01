@@ -2,7 +2,6 @@ package com.example._eme_Projet.service;
 
 import com.example._eme_Projet.model.User;
 import com.example._eme_Projet.model.parameter.UserParameter;
-import com.example._eme_Projet.model.response.UserDTO;
 import com.example._eme_Projet.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,6 +17,10 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
+    /** Méthode pour créer une utilisateur
+     *
+     * @param userParameter body for create
+     */
     public void createUser(UserParameter userParameter) {
         User user = userRepository.findByUsername(userParameter.getUsername());
 
@@ -35,10 +38,4 @@ public class UserService {
 
         userRepository.save(newUser);
     }
-
-    public void deleteUser(int id) {
-        userRepository.deleteById(id);
-    }
-
-
 }

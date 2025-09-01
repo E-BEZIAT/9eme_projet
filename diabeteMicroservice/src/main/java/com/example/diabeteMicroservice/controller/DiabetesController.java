@@ -19,8 +19,8 @@ public class DiabetesController {
 
     /** Ce controller retourne le risque de diabète pour un patient (identifié avec son id -> patientId)
      *
-     * @param patientId
-     * @return
+     * @param patientId id of patient
+     * @return risk of diabetes
      */
     @GetMapping("/{patientId}")
     public DiabetesDTO getRiskOfDiabetesByPatientId(@PathVariable("patientId") int patientId) {

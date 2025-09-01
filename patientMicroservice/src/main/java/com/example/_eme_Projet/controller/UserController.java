@@ -17,17 +17,14 @@ public class UserController {
         this.userService = userService;
     }
 
+    /** Renvoie la méthode de création d'utilisateur
+     *
+     * @param user body for create
+     * @return createUser
+     */
     @PostMapping("user/register")
     public ResponseEntity<Void> registerUser(@RequestBody UserParameter user) {
         userService.createUser(user);
         return ResponseEntity.ok().build();
     }
-
-    @Deprecated
-    @PostMapping("/user/delete")
-    public void deleteUser(@RequestParam int id) {
-        userService.deleteUser(id);
-    }
-
-
 }

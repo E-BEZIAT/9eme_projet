@@ -19,7 +19,11 @@ public class PatientController {
         this.patientService = patientService;
     }
 
-     //affiche le profil du patient
+    /** Affiche les informations d'un patient grâce à son id
+     *
+     * @param id id of patient
+     * @return patient informations
+     */
     @GetMapping("/{id}")
     public ResponseEntity<PatientDTO> getPatientById(@PathVariable("id") Integer id) {
         Patient patient = patientService.readPatient(id);
@@ -32,20 +36,23 @@ public class PatientController {
         return ResponseEntity.ok(patientDTO);
     }
 
-    //affiche la page de création du patient
-    @Deprecated
-    @GetMapping("/create")
-    public ResponseEntity<PatientParameter> createPatientForm() {
-        return ResponseEntity.ok(new PatientParameter());
-    }
-
-    //créer un patient
+    /** Renvoie le méthode de création d'un patient
+     *
+     * @param patientParameter body for create
+     * @return createPatient
+     */
     @PostMapping("/create")
     public ResponseEntity<String> createPatient(@RequestBody PatientParameter patientParameter) {
         patientService.createNewPatient(patientParameter);
         return ResponseEntity.ok("Patient créé avec succès");
     }
 
+    /** Renvoie la méthode pour modifier un patient
+     *
+     * @param id id of patient
+     * @param patient body for update
+     * @return updatePatient
+     */
     @PostMapping("/update/{id}")
     public ResponseEntity<Void> updatePatient(
             @PathVariable("id") Integer id,
@@ -55,6 +62,11 @@ public class PatientController {
         return ResponseEntity.noContent().build();
     }
 
+    /** Renvoie la méthode pour supprimer un patient
+     *
+     * @param id id of patient
+     * @return deletePatient
+     */
     @PostMapping("/delete/{id}")
     public ResponseEntity<Void> deletePatient(@PathVariable("id") Integer id) {
         patientService.deletePatient(id);

@@ -2,7 +2,6 @@ package com.example.frontMicroservice.controller;
 
 import com.example.frontMicroservice.feign.PatientFeign;
 import com.example.frontMicroservice.parameter.UserParameter;
-import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,12 +17,23 @@ public class UserController {
         this.patientFeign = patientFeign;
     }
 
+    /** Affiche la page d'inscription
+     *
+     * @param model model from view
+     * @return /register
+     */
     @GetMapping("/register")
     public String registerForm(Model model) {
         model.addAttribute("user", new UserParameter());
         return "register";
     }
 
+    /** Créer un nouvel utilisateur
+     *
+     * @param user body for create
+     * @param model model from view
+     * @return /login
+     */
     @PostMapping("/register")
     public String registerUser(@ModelAttribute("user") UserParameter user, Model model) {
         patientFeign.createUser(user);

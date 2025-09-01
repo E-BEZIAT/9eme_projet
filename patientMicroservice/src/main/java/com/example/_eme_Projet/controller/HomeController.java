@@ -18,6 +18,10 @@ public class HomeController {
         this.patientService = patientService;
     }
 
+    /** Retourne la liste de tous les patients
+     *
+     * @return Allpatients
+     */
     @GetMapping
     public List<PatientDTO> getAllPatients() {
         return patientService.readAllPatients();

@@ -39,10 +39,8 @@ public class UserServiceTest {
         when(userRepository.findByUsername("username")).thenReturn(null);
         when(passwordEncoder.encode("123")).thenReturn("encodedPassword");
 
-        // When
         userService.createUser(userParameter);
 
-        // Then
         verify(userRepository, times(1)).findByUsername("username");
         verify(passwordEncoder, times(1)).encode("123");
         verify(userRepository, times(1)).save(argThat(user ->
