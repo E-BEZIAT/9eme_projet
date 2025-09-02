@@ -4,9 +4,11 @@ import com.example._eme_Projet.model.Patient;
 import com.example._eme_Projet.model.parameter.PatientParameter;
 import com.example._eme_Projet.model.response.PatientDTO;
 import com.example._eme_Projet.service.PatientService;
+import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -42,7 +44,14 @@ public class PatientController {
      * @return createPatient
      */
     @PostMapping("/create")
-    public ResponseEntity<String> createPatient(@RequestBody PatientParameter patientParameter) {
+    public ResponseEntity<String> createPatient(
+            @Valid @RequestBody PatientParameter patientParameter,
+            BindingResult result
+    ) {
+        if(result.hasErrors()) {
+            return ResponseEntity.badRequest().body("Erreur dans les cahmps du patient");
+        }
+
         patientService.createNewPatient(patientParameter);
         return ResponseEntity.ok("Patient créé avec succès");
     }

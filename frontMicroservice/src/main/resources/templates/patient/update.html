@@ -28,25 +28,25 @@
         <input type="hidden" th:field="*{id}" />
         <div class="mb-3">
             <label for="lastName" class="form-label">Nom</label>
-            <input type="text" th:field="*{lastName}" class="form-control rounded-3" id="lastName">
+            <input type="text" th:field="*{lastName}" class="form-control rounded-3" id="lastName" required>
             <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="text-danger small"></div>
         </div>
 
         <div class="mb-3">
             <label for="firstName" class="form-label">Prénom</label>
-            <input type="text" th:field="*{firstName}" class="form-control rounded-3" id="firstName">
+            <input type="text" th:field="*{firstName}" class="form-control rounded-3" id="firstName" required>
             <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="text-danger small"></div>
         </div>
 
         <div class="mb-3">
             <label for="dateOfBirth" class="form-label">Date de naissance</label>
-            <input type="date" th:field="*{dateOfBirth}" class="form-control rounded-3" id="dateOfBirth">
+            <input type="date" th:field="*{dateOfBirth}" class="form-control rounded-3" id="dateOfBirth" required>
             <div th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}" class="text-danger small"></div>
         </div>
         <div class="mb-3">
             <label for="gender" class="form-label">Genre</label>
             <select th:field="*{gender}" class="form-select rounded-3" id="gender">
-                <option value="">-- Sélectionner --</option>
+                <option value="" disabled selected>-- Sélectionner --</option>
                 <option value="M">Masculin</option>
                 <option value="F">Féminin</option>
             </select>

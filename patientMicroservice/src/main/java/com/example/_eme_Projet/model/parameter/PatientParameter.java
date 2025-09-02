@@ -16,14 +16,14 @@ import java.time.LocalDate;
 public class PatientParameter {
 
     private int id;
-    @NotBlank
+    @NotBlank(message = "Le nom est obligatoire")
     private String lastName;
-    @NotBlank
+    @NotBlank(message = "Le prénom est obligatoire")
     private String firstName;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @NotNull
+    @NotNull(message = "La date de naissance est obligatoire")
     private LocalDate dateOfBirth;
-    @NotBlank
+    @NotBlank(message = "Le genre est obligatoire")
     private String gender;
     private String address;
     private String phoneNumber;

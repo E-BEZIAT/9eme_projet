@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Nettoyage et commentaire du code">
-      <change afterPath="$PROJECT_DIR$/diabeteMicroservice/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontMicroservice/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayMicroservice/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/medecinMicroservice/dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="f49fe19e-9d40-4125-9ea5-79fd106c8c4c" name="Changes" comment="Création d'image des microservice et stockage dans docker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patientMicroservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/parameter/PatientParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/parameter/PatientParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/response/PatientDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/java/com/example/frontMicroservice/response/PatientDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/patient/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontMicroservice/src/main/resources/templates/user/user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/model/parameter/PatientParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientMicroservice/src/main/java/com/example/_eme_Projet/model/parameter/PatientParameter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +100,7 @@
     "Spring Boot.MedecinMicroserviceApplication.executor": "Run",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/BEZIAT/Documents/Formation_dev/9eme_projet",
+    "last_opened_file_path": "C:/Users/BEZIAT/Documents/Formation_dev/7eme projet/JavaDA_PROJECT7_RESTAPI",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -298,7 +298,7 @@
       <workItem from="1756336347888" duration="5016000" />
       <workItem from="1756464715636" duration="13985000" />
       <workItem from="1756734540332" duration="11161000" />
-      <workItem from="1756746504745" duration="4487000" />
+      <workItem from="1756746504745" duration="8760000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -356,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756744640381</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Création d'image des microservice et stockage dans docker">
+      <option name="closed" value="true" />
+      <created>1756762275047</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756762275047</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,6 +390,7 @@
     <MESSAGE value="Ajout des test unitaires pour les méthodes des services" />
     <MESSAGE value="Ajout de la mise en page des pages front" />
     <MESSAGE value="Nettoyage et commentaire du code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nettoyage et commentaire du code" />
+    <MESSAGE value="Création d'image des microservice et stockage dans docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Création d'image des microservice et stockage dans docker" />
   </component>
 </project>

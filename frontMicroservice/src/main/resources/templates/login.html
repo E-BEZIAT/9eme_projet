@@ -20,6 +20,9 @@
                     </div>
                     <button type="submit" class="btn btn-primary w-100 rounded-3 py-2 fw-medium">Connexion</button>
                 </form>
+                <div th:if="${param.error}" class="alert alert-danger mt-3" role="alert">
+                    Nom d'utilisateur ou mot de passe incorrect
+                </div>
                 <div class="text-center mt-3">
                     <p class="mb-0">Pas encore inscrit ? <a th:href="@{/register}">Inscription</a></p>
                 </div>
